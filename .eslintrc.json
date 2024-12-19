@@ -1,0 +1,96 @@
+{
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@next/next/recommended",
+        "plugin:import/recommended",
+        "prettier",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "jsx-a11y",
+        "react-hooks",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "import/order": "off",
+        "no-unsafe-optional-chaining": "off",
+        "@next/next/no-document-import-in-page": "off",
+        "react/prop-types": [
+            2,
+            {
+                "skipUndeclared": true
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/display-name": "off",
+        "react/no-unknown-property": [
+            "error",
+            {
+                "ignore": ["section"]
+            }
+        ],
+        // "no-unused-vars": 2,
+        "no-undef": 2,
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        /** this is in place to avoid mistaken eslint errors for next.js Link*/
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                "components": ["Link"],
+                "specialLink": ["hrefLeft", "hrefRight"],
+                "aspects": ["invalidHref", "preferButton"]
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "import/named": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "args": "none"
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@next/next/no-img-element": "off",
+        "no-console": "off"
+    },
+    "globals": {
+        "React": "writable"
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    }
+}

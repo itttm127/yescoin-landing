@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  /* font-family: "Neue";
+  src: url("https://db.onlinewebfonts.com/t/3c76d979e72206bc554a1863d96ac5d4.eot");
+  src: url("https://db.onlinewebfonts.com/t/3c76d979e72206bc554a1863d96ac5d4.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3c76d979e72206bc554a1863d96ac5d4.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3c76d979e72206bc554a1863d96ac5d4.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/3c76d979e72206bc554a1863d96ac5d4.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3c76d979e72206bc554a1863d96ac5d4.svg#Neue Haas Grotesk Text Pro")
+      format("svg");
+  font-weight: 400;
+  font-style: normal; */
+  font-family: "Neue";
+  src: 
+    /* url("/font/NeueHaasDisplayBlack.ttf"),
+    url("/font/NeueHaasDisplayBlackItalic.ttf"), */
+    /* 
+    url("/font/NeueHaasDisplayBoldItalic.ttf"), */
+    /* 
+    url("/font/NeueHaasDisplayLightItalic.ttf"),
+    url("/font/NeueHaasDisplayMediumItalic.ttf"),
+    url("/font/NeueHaasDisplayRomanItalic.ttf"), */
+    /* url("/font/NeueHaasDisplayBold.ttf"), */
+    /* url("/font/NeueHaasDisplayLight.ttf"), */
+    url("/font/NeueHaasDisplayRoman.ttf"),
+    url("/font/NeueHaasDisplayMediu.ttf"),
+    url("/font/NeueHaasDisplayThin.ttf");
+    /* url("/font/NeueHaasDisplayThinItalic.ttf"),
+    url("/font/NeueHaasDisplayXThin.ttf"),
+    url("/font/NeueHaasDisplayXThinItalic.ttf"),
+    url("/font/NeueHaasDisplayXXThin.ttf"),
+    url("/font/NeueHaasDisplayXXThinItalic.ttf"); */
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+* {
+  user-select: none !important;
+  font-family: Neue !important;
+}
+
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee1 {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-inner {
+  animation: marquee 60s linear infinite;
+  /* animation-delay: -20s; */
+}
+
+.marquee1-inner {
+  animation: marquee1 60s linear infinite;
+  /* animation-delay: -20s; */
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+.marquee1:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Accordion */
+/* Style the accordion section */
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 18px 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: transparent;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 18px 0;
+}
+
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*Style custom pagenation of Best Swiper */
+.swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #777777; /* Default color */
+  width: 7px;
+  height: 7px;
+  margin: 0 7px;
+  border-radius: 7px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff; /* Active bullet color */
+  width: 18px; /* Make active bullet larger */
+}
