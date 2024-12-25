@@ -29,6 +29,10 @@ export default {
           "linear-gradient(200deg, #130DB2 0%, #5C58C7 33%, #F86C25 67%, #FBCDB5 100% )",
       },
     },
+    fontFamily: {
+      "neue-display": ["NeueHaasGroteskDisplay"],
+      "neue-text": ["NeueHaasGroteskText"],
+    },
   },
   plugins: [],
 } satisfies Config;

@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./globals.css";
+
+.roadmap-bubble1 {
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(
+      180deg,
+      rgba(254, 226, 211, 0.4) 0%,
+      rgba(235, 234, 248, 0.4) 100%
+    );
+}
+
+.roadmap-bubble2 {
+  background: linear-gradient(180deg, #f86c25 0%, #8582d5 100%);
+}
+
+.roadmap-bubble3 {
+  background: linear-gradient(180deg, #fee2d3 0%, #ebeaf8 100%);
+  opacity: 0.25px;
+}
+
+.roadmap-bubble4 {
+  background: linear-gradient(180deg, #fdd3be 0%, #c2c0ea 100%);
+}
+
+.roadmap-bubble5 {
+  background: linear-gradient(180deg, #f9915c 0%, #5c58c7 100%);
+}
+
+.roadmap-bubble6 {
+  background: linear-gradient(180deg, #321607 0%, #0a0925 100%);
+}
+
+.roadmap-bubble7 {
+  background: linear-gradient(180deg, #954116 0%, #292594 100%);
+}

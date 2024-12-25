@@ -1,44 +1,32 @@
-import AirdropComponent from "@/components/Airdrop";
-import BannerComponent from "@/components/Banner";
-import BestComponent from "@/components/Best";
-import CashoutComponent from "@/components/Cashout";
-import CounterComponent from "@/components/Counter";
-import FaqComponent from "@/components/FAQ";
-import Container from "@/components/layout/container";
-import ProviderComponent from "@/components/Provider";
-import RoadmapComponent from "@/components/Roatmap";
+import {
+  AirdropComponent,
+  HeroComponent,
+  BestComponent,
+  CashoutComponent,
+  Container,
+  CounterComponent,
+  FaqComponent,
+  ProviderComponent,
+  RoadmapComponent,
+} from "@/components";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="w-full">
       <Container>
-        {/* Banner */}
-        <BannerComponent />
-
-        {/* Airdrop */}
+        <HeroComponent />
         <AirdropComponent />
       </Container>
 
-      {/* Provider */}
       <ProviderComponent />
 
       <Container>
-        {/* Counter */}
         <CounterComponent />
-
-        {/* Best */}
         <BestComponent />
-
-        {/* Roadmap */}
         <RoadmapComponent />
-
-        {/* CashoutComponent */}
         <CashoutComponent />
-
-        {/* Faq */}
         <FaqComponent />
       </Container>
-
     </div>
   );
 }
